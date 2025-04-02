@@ -1,0 +1,14 @@
+# npm test
+#!/bin/sh
+npx --no -- husky run pre-commit
+
+# 运行 ESLint 检查
+npx eslint . --ext .ts,.tsx --fix
+
+# 运行 Prettier 检查
+npx prettier . --check
+
+#!/usr/bin/env sh
+npx --no -- commitlint --edit "$1"
+
+npx lint-staged
