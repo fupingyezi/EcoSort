@@ -30,7 +30,6 @@
     "./config",
     "**/*.ts",
     "**/*.tsx",
-    "**/*.scss"
   ],
   "compileOnSave": false
 }

@@ -1,0 +1,137 @@
+.classifyText {
+  width: 100%;
+  height: calc(100vh - 180rpx);
+  background-color: #f5f6fa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40rpx;
+  &-search {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    gap: 54rpx;
+    height: 62rpx;
+    margin-top: 74rpx;
+    &-input {
+      width: 70%;
+      height: 62rpx;
+      background-color: #ebeaec;
+      border-radius: 10rpx;
+    }
+    &-inputStyle {
+      height: 60rpx;
+      width: 90%;
+      padding-left: 20rpx;
+    }
+    &-btn {
+      width: 20%;
+      height: 62rpx;
+      background-color: #12b858;
+      display: flex;
+      border-radius: 10rpx;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  &-title {
+    margin-top: 20rpx;
+    font-family: "DingTalk JinBuTi";
+    font-size: 44rpx;
+    width: 90%;
+    color: #828285;
+    height: 62rpx;
+    line-height: 62rpx;
+  }
+  &-form {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    font-family: SimHei;
+    gap: 10rpx;
+    position: relative;
+    z-index: 2;
+    &-meter {
+      display: flex;
+      width: 100%;
+      height: 48rpx;
+      color: #fff;
+      font-size: 20rpx;
+      line-height: 48rpx;
+      text-align: center;
+    }
+    &-content {
+      display: flex;
+      flex-direction: column;
+      gap: 6rpx;
+    }
+  }
+  &-back {
+    position: absolute;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+    bottom: 0;
+    z-index: 0;
+  }
+}
+
+.placeholder-Style {
+  font-family: SimHei;
+  font-size: 30rpx;
+  color: #828285;
+}
+
+.meter1 {
+  width: 10%;
+  background-color: #008000;
+  border-radius: 10rpx 0px 0px 10rpx;
+}
+
+.meter2 {
+  width: 20%;
+  background-color: #82bb3e;
+}
+
+.meter3 {
+  width: 30%;
+  background-color: #82bb3e;
+}
+
+.meter4 {
+  width: 40%;
+  background-color: #008000;
+  border-radius: 0px 10rpx 10rpx 0px;
+}
+
+.container {
+  height: 70rpx;
+  width: 100%;
+  display: flex;
+  font-size: 24rpx;
+  color: #003f38;
+  line-height: 70rpx;
+  background-color: #d1d1d6;
+  text-align: center;
+  border-radius: 10rpx;
+  &-content1 {
+    height: 100%;
+    width: 10%;
+    border-radius: 10rpx 0px 0px 10rpx;
+  }
+  &-content2 {
+    height: 100%;
+    width: 20%;
+  }
+  &-content3 {
+    height: 100%;
+    width: 30%;
+  }
+  &-content4 {
+    height: 35rpx;
+    line-height: 35rpx;
+    width: 40%;
+    border-radius: 0px 10rpx 10rpx 0px;
+    font-size: 16rpx;
+  }
+}

@@ -1,0 +1,62 @@
+.classifyVoice {
+  height: calc(100vh - 180rpx);
+  background-color: #f5f6fa;
+  &-back {
+    position: absolute;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+    bottom: 0;
+    z-index: 0;
+  }
+  &-voice {
+    width: 252rpx;
+    height: 252rpx;
+    border-radius: 252rpx;
+    position: absolute;
+    z-index: 3;
+    bottom: 260rpx;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &-style {
+      width: 128rpx;
+    }
+  }
+  &-content {
+    width: 100%;
+    height: 60%;
+  }
+}
+
+.animation-pos {
+  position: absolute;
+  bottom: 252rpx;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.animationBack1, .animationBack3 {
+  @extend .animation-pos;
+  width: 273rpx;
+  z-index: 2;
+  animation: rotateAnimation 2s linear infinite;
+}
+.animationBack2, .animationBack4 {
+  @extend .animation-pos;
+  width: 282.34rpx;
+  z-index: 1;
+  animation: rotateAnimation 2s linear infinite;
+}
+
+@keyframes rotateAnimation {
+  from {
+    transform: translateX(-50%) rotate(0deg);
+  }
+  to {
+    transform: translateX(-50%) rotate(360deg);
+  }
+}
+

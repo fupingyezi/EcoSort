@@ -1,0 +1,21 @@
+.primary {
+    font-family: "DingTalk JinBuTi";
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #3D3D3D;
+    gap: 240rpx;
+    &-content1 {
+        margin-top: 100rpx;
+        font-size: 60rpx;
+        font-weight: bold;
+        text-align: center;
+    }
+    &-content2 {
+        width: 86%;
+        text-align: center;
+        font-size: 48rpx;
+    }
+}

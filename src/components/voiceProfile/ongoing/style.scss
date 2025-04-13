@@ -1,0 +1,87 @@
+.ongoing {
+    font-family: "DingTalk JinBuTi";
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #3D3D3D;
+    gap: 240rpx;
+    &-title {
+        margin-top: 100rpx;
+        font-size: 60rpx;
+        font-weight: bold;
+        text-align: center;
+    }
+    &-animation {
+        height: 360rpx;
+        display: flex;
+        width: 70%;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: space-between;
+        &-item1 {
+            @extend .itemStyle;
+            height: 112rpx;
+            animation: radius-animation 0.7s ease;
+            @extend .animation-ifinity;
+        }
+        &-item2 {
+            @extend .itemStyle;
+            height: 252rpx;
+            animation: radius-animation 0.67s ease;
+            @extend .animation-ifinity;
+        }
+        &-item3 {
+            @extend .itemStyle;
+            height: 184rpx;
+            animation: radius-animation 0.87s ease;
+            @extend .animation-ifinity;
+        }
+        &-item4 {
+            @extend .itemStyle;
+            height: 280rpx;
+            animation: radius-animation 0.92s ease;
+            @extend .animation-ifinity;
+        }
+        &-item5 {
+            @extend .itemStyle;
+            height: 160rpx;
+            animation: radius-animation 0.74s ease;
+            @extend .animation-ifinity;
+        }
+        &-item6 {
+            @extend .itemStyle;
+            height: 200rpx;
+            animation: radius-animation 0.7s ease;
+            @extend .animation-ifinity;
+        }
+        &-item7 {
+            @extend .itemStyle;
+            height: 240rpx;
+            animation: radius-animation 0.8s ease;
+            @extend .animation-ifinity;
+        }
+    }
+}
+
+.itemStyle {
+    width: 48rpx;
+    border-radius: 24rpx;
+    background-color: #1f94ea;
+}
+
+@keyframes radius-animation {
+    100% {
+        height: 40rpx;
+        border-radius: 50%;
+        filter: contrast(2);
+    }
+}
+
+.animation-ifinity {
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    animation-direction: alternate;
+    -webkit-animation-direction: alternate; 
+}

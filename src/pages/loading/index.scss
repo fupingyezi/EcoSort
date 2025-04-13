@@ -1,0 +1,63 @@
+.loading {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    font-family: 'DingTalk JinBuTi';
+    background: linear-gradient(180deg, #3ABA6D 0%, rgba(38, 198, 102, 0.8425) 15%, rgba(58, 186, 109, 0.5959) 40%, rgba(50, 179, 101, 0.4521) 54%, rgba(4, 136, 26, 0.2534) 74%, rgba(14, 165, 74, 0.1301) 89%, rgba(0, 0, 0, 0) 100%);
+    &-logo {
+        position: absolute;
+        @extend .abs_middle;
+        top: 12%;
+        height: 316rpx;
+    }
+    &-icon {
+        position: absolute;
+        top: calc(12% + 316rpx + 36rpx);
+        width: 100%;
+        left: -20rpx;
+    }
+    &-earth {
+        position: absolute;
+        height: 640rpx;
+        bottom: 140rpx;
+        @extend .abs_middle
+    }
+    &-content {
+        position: absolute;
+        @extend .abs_middle;
+        top: calc(12% + 316rpx + 86rpx);
+        display: flex;
+        flex-direction: column;
+        gap: 15rpx;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        &-item {
+            color: rgba(61, 61, 61, 1);
+            font-size: 56rpx;
+        }
+    }
+    &-floor {
+        position: absolute;
+        @extend .abs_middle;
+        bottom: 140rpx;
+        width: 100%;
+        &-btn {
+            width: 90%;
+            height: 100rpx;
+            border-radius: 126rpx;
+            background-color: #EBEAEC;
+            border: 1px solid #000000;
+            text-align: center;
+            line-height: 100rpx;
+            color: #3D3D3D;
+            font-size: 54rpx;
+            letter-spacing: 2rpx;
+        }
+    }
+}
+
+.abs_middle {
+    left: 50%;
+    transform: translateX(-50%);
+}

@@ -1,0 +1,21 @@
+.navigation {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    height: 180rpx;
+    background-color: #F5F6FA;
+    &-title {
+        font-family: "DingTalk JinBuTi";
+        color: #3D3D3D;
+        font-size: 48rpx;
+        position: absolute;
+        bottom: 26rpx;
+        left: 30rpx;
+        display: flex;
+        align-items: center;
+    }
+    &-img {
+        height: 48rpx;
+        margin-right: 10rpx;
+    }
+}
