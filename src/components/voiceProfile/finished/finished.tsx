@@ -15,7 +15,7 @@ const Finished: React.FC = memo(() => {
       return `${result}${char}`;
     }, "");
   };
-  
+
   return (
     <View className="finished">
       <View className="finished-title">

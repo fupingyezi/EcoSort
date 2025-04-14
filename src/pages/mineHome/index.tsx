@@ -59,13 +59,13 @@ const Index = () => {
     },
   ];
   const handleClick = (title) => {
-    if (title === '题目练习') {
+    if (title === "题目练习") {
       navigateTo({ url: "/pages/examination/index" });
     }
-    if (title === '反馈与建议') {
+    if (title === "反馈与建议") {
       navigateTo({ url: "/pages/feedback/index" });
     }
-  }
+  };
   return (
     <>
       <MyNavigation type="tab" title="个人中心" url="" />
@@ -84,7 +84,11 @@ const Index = () => {
         </View>
         <View className="mineHome-orderColumn">
           {order_list.map((item, index) => (
-            <View className="mineHome-orderColumn-item" key={index} onClick={() => handleClick(item.title)}>
+            <View
+              className="mineHome-orderColumn-item"
+              key={index}
+              onClick={() => handleClick(item.title)}
+            >
               <Image
                 src={item.img}
                 mode="widthFix"

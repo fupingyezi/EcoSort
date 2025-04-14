@@ -8,7 +8,7 @@ import MyNavigation from "@/common/modules/myNavigation/myNavigation";
 
 const Index = () => {
   const [maxStarIndex, setMaxStarIndex] = useState<number>(1);
-  const star_list = [1, 2, 3, 4, 5]
+  const star_list = [1, 2, 3, 4, 5];
   return (
     <>
       <MyNavigation
