@@ -1,0 +1,102 @@
+.result {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 180rpx);
+    text-align: center;
+    &-img1 {
+        @extend .middle;
+        top: 160rpx;
+        width: 460rpx;
+        z-index: 2;
+    }
+    &-content {
+        @extend .middle;
+        width: 70%;
+        height: 550rpx;
+        top: 400rpx;
+        z-index: 1;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 56rpx;
+        border-radius: 40rpx;
+        padding: 80rpx 66rpx;
+        > .congratulation {
+            font-size: 32rpx;
+            color: #12B858;
+        }
+    }
+    &-score {
+        > .title {
+            font-size: 32rpx;
+            color: #1A1A1A;
+        }
+        > .score {
+            font-size: 96rpx;
+            color: #12B858;
+        }
+    }
+    &-subject {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10rpx;
+        width: 100%;
+        > .title {
+            font-size: 36rpx;
+            color: #1A1A1A;
+        }
+        > .condition {
+            width: calc(100% - 64rpx);
+            height: 96rpx;
+            display: flex;
+            flex-direction: column;
+            gap: 16rpx;
+            border-radius: 16rpx;
+            padding: 32rpx;
+            background-color: #F8F8F8;
+            > .condition-item {
+                width: 100%;
+                display: flex;
+                .item-line {
+                    width: 100%;
+                    display: flex;
+                    > .item-title {
+                        width: 50%;
+                        font-size: 28rpx;
+                        color: #8C8C8C;
+                    }
+                    > .item-data {
+                        width: 50%;
+                        font-size: 32rpx;
+                        color: #1A1A1A;
+                    }
+                }
+            }
+        }
+    }
+    &-personal {
+        @extend .middle;
+        top: 1200rpx;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 180rpx;
+        align-items: center;
+        gap: 20rpx;
+        &-img {
+            width: 48rpx;
+        }
+        &-text {
+            font-size: 28rpx;
+            color: #1A1A1A;
+        }
+    }
+}
+
+.middle {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}

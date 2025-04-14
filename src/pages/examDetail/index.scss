@@ -1,0 +1,75 @@
+.exam {
+    width: 100%;
+    height: 100vh;
+    background-color: #F5F6FA;
+    font-family: "DingTalk JinBuTi";
+    &-navigation {
+        width: 100%;
+        height: 180rpx;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        display: flex;
+        &-img {
+            margin-top: 110rpx;
+            margin-left: 24rpx;
+            height: 40rpx;
+        }
+        > .timer {
+            margin-left: 200rpx;
+            margin-top: 110rpx;
+            font-size: 36rpx;
+            color: #1A1A1A;
+        }
+        > .exam-title {
+            margin-left: 240rpx;
+        }
+    }
+    &-detail {
+        font-size: 28rpx;
+        color: #8C8C8C;
+        width: 100%;
+        text-align: center;
+        height: 76rpx;
+        line-height: 76rpx;
+    }
+    &-footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 136rpx;
+        background-color: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 28rpx;
+        &-commit {
+            width: 184rpx;
+            height: 66rpx;
+            background-color: #12B858;
+            color: #fff;
+            text-align: center;
+            line-height: 66rpx;
+            font-size: 28rpx;
+            border-radius: 48rpx;
+        }
+        &-condition {
+            display: flex;
+            gap: 40rpx;
+            align-items: center;
+            margin-right: 40rpx;
+            > .condition-item {
+                display: flex;
+                gap: 6rpx;
+                > .item-icon {
+                    height: 34rpx;
+                }
+                > .item-text {
+                    height: 34rpx;
+                    font-size: 24rpx;
+                    line-height: 34rpx;
+                }
+            }
+        }
+    }
+}

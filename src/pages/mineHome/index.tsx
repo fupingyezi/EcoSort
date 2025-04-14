@@ -1,6 +1,7 @@
 import { View, Image } from "@tarojs/components";
 import MyNavigation from "@/common/modules/myNavigation/myNavigation";
 import "./index.scss";
+import { navigateTo } from "@tarojs/taro";
 import headphone from "@/common/assets/mineHome/headphone.svg";
 import order1 from "@/common/assets/mineHome/order1.svg";
 import order2 from "@/common/assets/mineHome/order2.svg";
@@ -57,6 +58,14 @@ const Index = () => {
       img: set5,
     },
   ];
+  const handleClick = (title) => {
+    if (title === '题目练习') {
+      navigateTo({ url: "/pages/examination/index" });
+    }
+    if (title === '反馈与建议') {
+      navigateTo({ url: "/pages/feedback/index" });
+    }
+  }
   return (
     <>
       <MyNavigation type="tab" title="个人中心" url="" />
@@ -75,7 +84,7 @@ const Index = () => {
         </View>
         <View className="mineHome-orderColumn">
           {order_list.map((item, index) => (
-            <View className="mineHome-orderColumn-item" key={index}>
+            <View className="mineHome-orderColumn-item" key={index} onClick={() => handleClick(item.title)}>
               <Image
                 src={item.img}
                 mode="widthFix"

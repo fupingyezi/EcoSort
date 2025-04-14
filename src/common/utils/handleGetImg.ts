@@ -10,7 +10,7 @@ interface AlbumProps {
 const handleChooseImage = ({
     setIsVisible,
     setImgUrl,
-    requestType,
+    // requestType,
     sourceType
 }: AlbumProps) => {
     Taro.chooseImage({

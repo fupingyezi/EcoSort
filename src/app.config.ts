@@ -6,6 +6,9 @@ export default {
     "pages/mineHome/index",
     "pages/classifyText/index",
     "pages/classifyVoice/index",
+    "pages/examDetail/index",
+    "pages/examination/index",
+    "pages/feedback/index",
   ],
   tabBar: {
     color: "#D8D8D8",
@@ -43,7 +46,7 @@ export default {
 
   plugins: {
     WechatSI: {
-      version: "0.3.3",
+      version: "0.3.6",
       provider: "wx069ba97219f66d99",
     },
   },

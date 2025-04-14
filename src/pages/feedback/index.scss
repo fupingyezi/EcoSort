@@ -1,0 +1,47 @@
+.feedback {
+  height: calc(100vh - 180rpx);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 64rpx;
+  align-items: center;
+  justify-content: center;
+  font-family: "DingTalk JinBuTi";
+  &-img {
+    width: 224rpx;
+  }
+  &-title {
+    text-align: center;
+    line-height: 50rpx;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  &-star {
+    width: 80%;
+    height: 136rpx;
+    display: flex;
+    &-item {
+      width: 20%;
+    }
+  }
+  &-input {
+    width: calc(80% - 72rpx);
+    height: 206rpx;
+    border: 1px solid #12b858;
+    border-radius: 40rpx;
+    padding: 36rpx;
+    color: #1a1a1a;
+  }
+  &-commit {
+    font-family: SimHei;
+    width: 540rpx;
+    height: 108rpx;
+    color: #fff;
+    text-align: center;
+    line-height: 108rpx;
+    font-size: 40rpx;
+    background-color: #12b858;
+    border-radius: 40rpx;
+  }
+}
