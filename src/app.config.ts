@@ -46,7 +46,7 @@ export default {
 
   plugins: {
     WechatSI: {
-      version: "0.3.6",
+      version: "0.3.4",
       provider: "wx069ba97219f66d99",
     },
   },

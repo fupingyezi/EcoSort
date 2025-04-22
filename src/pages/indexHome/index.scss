@@ -56,6 +56,10 @@
         align-items: center;
         gap: 16rpx;
         font-size: 28rpx;
+        &.is-active {
+          background-color: #12b858;
+          color: #fff;
+        }
       }
     }
     &-search {
@@ -96,4 +100,58 @@
   font-family: DingTalk JinBuTi;
   font-size: 28rpx;
   color: #bfbfbf;
+}
+
+.index-content {
+  height: 320rpx;
+  width: 100%;
+}
+
+
+.index-header-text-item-large {
+  font-size: 40rpx;
+  margin-bottom: 10rpx;
+}
+
+.index-header-text-item-medium {
+  font-size: 26rpx;
+}
+
+.index-header-text-item-small {
+  font-size: 20rpx;
+}
+
+.index-header-info-img {
+  height: 32rpx;
+  padding-left: 32rpx;
+}
+
+.index-header-info-text {
+  font-size: 26rpx;
+  color: #1A1A1A;
+  white-space: nowrap;
+}
+
+.index-header-info-arrow {
+  height: 24rpx;
+}
+
+.index-header-info-content {
+  font-size: 26rpx;
+  color: #3D3D3D;
+  padding-right: 32rpx;
+}
+
+.index-header-choice-item-img {
+  width: 48rpx; /* 假设之前图片有 width: 48rpx 样式 */
+}
+
+.index-header-search-icon {
+  height: 32rpx;
+  padding-left: 24rpx;
+}
+
+.index-header-search-input {
+  font-size: 28rpx;
+  color: #1A1A1A;
 }

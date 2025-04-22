@@ -1,4 +1,4 @@
-import { View, ScrollView, Image, Input } from "@tarojs/components";
+import { View, Image, Input } from "@tarojs/components";
 import { useState } from "react";
 import MyNavigation from "@/common/modules/myNavigation/myNavigation";
 import {
@@ -7,8 +7,8 @@ import {
   Community,
   Exchange,
 } from "@/components/indexProfile";
+import LoginWindow from "@/components/loginWindow/loginWindow";
 import "./index.scss";
-import img1 from "@/common/assets/index/index1.svg";
 import img2 from "@/common/assets/index/info.svg";
 import arrowLeft from "@/common/assets/index/arrow-left.svg";
 import c1 from "@/common/assets/index/icon1.svg";
@@ -20,6 +20,8 @@ import actc2 from "@/common/assets/index/icon2Act.svg";
 import actc3 from "@/common/assets/index/icon3Act.svg";
 import actc4 from "@/common/assets/index/icon4Act.svg";
 import search from "@/common/assets/index/search.svg";
+import classNames from "classnames";
+import IndexContent from "@/components/indexContent/IndexContent";
 
 interface choiceType {
   img: string;
@@ -66,79 +68,59 @@ const Index = () => {
   const [selectedPage, setSelectedPage] = useState<"c1" | "c2" | "c3" | "c4">(
     "c1",
   );
+  const [isOpen, setIsOpen] = useState(true);
+  const [status, setStatus] = useState<"login_begin" | "get_phone">(
+    "login_begin",
+  );
+
+  const loginWindowContext = {
+    isOpen,
+    setIsOpen,
+    status,
+    setStatus,
+  };
+
   return (
     <>
+      <LoginWindow {...loginWindowContext} />
       <MyNavigation type="tab" url="" title="拉风侠" />
-      <View className="index" style={{ height: "calc(100vh - 180rpx)" }}>
+      <View className="index">
         <View className="index-header">
-          <View style={"height: 320rpx; width: 100%;"}>
-            <Image
-              src={img1}
-              className="index-header-img"
-              mode="widthFix"
-            ></Image>
-            <View className="index-header-text">
-              <View
-                className="index-header-text-item"
-                style={"font-size:40rpx; margin-bottom: 10rpx"}
-              >
-                正在答题......
-              </View>
-              <View
-                className="index-header-text-item"
-                style={"font-size:26rpx;"}
-              >
-                垃圾分类的重要性
-              </View>
-              <View
-                className="index-header-text-item"
-                style={"font-size:20rpx;"}
-              >
-                你已经超过80%的用户了!
-              </View>
-            </View>
-          </View>
+          <IndexContent />
           <View className="index-header-info">
             <Image
               src={img2}
               mode="heightFix"
-              style={"height: 32rpx; padding-left:32rpx;"}
+              className="index-header-info-img"
             ></Image>
-            <View
-              style={"font-size:26rpx; color: #1A1A1A; white-space: nowrap;"}
-            >
-              通知
-            </View>
+            <View className="index-header-info-text">通知</View>
             <View className="line"></View>
             <Image
               src={arrowLeft}
               mode="heightFix"
-              style={"height: 24rpx;"}
+              className="index-header-info-arrow"
             ></Image>
-            <View style={"font-size:26rpx; color: #3D3D3D;padding-right:32rpx"}>
+            <View className="index-header-info-content">
               上海市出台《城市居民垃圾分类准则3.0》
             </View>
           </View>
           <View className="index-header-choice">
-            {choiceList.map((item, index) => {
+            {choiceList.map((item) => {
               const tag = selectedPage === item.type;
               return (
                 <View
-                  className="index-header-choice-item"
-                  style={
-                    tag
-                      ? "background-color: #12B858;"
-                      : "background-color: #fff;"
-                  }
-                  key={index}
+                  className={classNames("index-header-choice-item", {
+                    "is-active": tag,
+                  })}
+                  key={item.type}
                   onClick={() => setSelectedPage(item.type)}
                 >
                   <Image
                     src={tag ? item.imgAct : item.img}
                     mode="widthFix"
-                    style={"width : 48rpx"}
+                    className="index-header-choice-item-img"
                   ></Image>
-                  <View style={tag ? "color:#fff" : "color:#3D3D3D"}>
+                  <View className="index-header-choice-item-text">
                     {item.text}
                   </View>
                 </View>
@@ -149,19 +131,21 @@ const Index = () => {
             <Image
               src={search}
               mode="heightFix"
-              style={"height: 32rpx; padding-left: 24rpx"}
+              className="index-header-search-icon"
             ></Image>
             <Input
-              style={"font-size: 28rpx;color: #1A1A1A;"}
+              className="index-header-search-input"
               placeholder={placeholderText[selectedPage]}
               placeholderClass="placehoderStyle"
             ></Input>
           </View>
         </View>
-        {selectedPage === "c1" && <Knowledge />}
-        {selectedPage === "c2" && <Policy />}
-        {selectedPage === "c3" && <Community />}
-        {selectedPage === "c4" && <Exchange />}
+        <View>
+          {selectedPage === "c1" && <Knowledge />}
+          {selectedPage === "c2" && <Policy />}
+          {selectedPage === "c3" && <Community />}
+          {selectedPage === "c4" && <Exchange />}
+        </View>
       </View>
     </>
   );

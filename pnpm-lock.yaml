@@ -80,6 +80,9 @@ importers:
       taro-hooks:
         specifier: ^2.2.0
         version: 2.2.0(@tarojs/taro-h5@4.0.9(@tarojs/components@4.0.9(@tarojs/helper@4.0.9)(@types/react@18.3.20)(postcss@8.5.3)(react@18.3.1)(rollup@3.29.5))(@tarojs/taro@4.0.9(@tarojs/components@4.0.9(@tarojs/helper@4.0.9)(@types/react@18.3.20)(postcss@8.5.3)(react@18.3.1)(rollup@3.29.5))(@tarojs/helper@4.0.9)(@tarojs/shared@4.0.9)(@types/react@18.3.20)(postcss@8.5.3)(rollup@3.29.5)))(@tarojs/taro@4.0.9(@tarojs/components@4.0.9(@tarojs/helper@4.0.9)(@types/react@18.3.20)(postcss@8.5.3)(react@18.3.1)(rollup@3.29.5))(@tarojs/helper@4.0.9)(@tarojs/shared@4.0.9)(@types/react@18.3.20)(postcss@8.5.3)(rollup@3.29.5))
+      taro-icons:
+        specifier: ^0.4.0
+        version: 0.4.0
       zustand:
         specifier: 4.5.5
         version: 4.5.5(@types/react@18.3.20)(react@18.3.1)
@@ -4426,6 +4429,10 @@ packages:
     resolution: {integrity: sha512-jCvmsr+1IUSMUyzOkRcvnVbX3ZYC6g9TDrDbFuFmRDq7PD4yaGbLKNQL6k2jnArV8hjYxh7hVhAZB6s9HDGpZA==}
     engines: {node: '>=0.10.0'}
 
+  react@16.14.0:
+    resolution: {integrity: sha512-0X2CImDkJGApiAlcf0ODKIneSwBPhqJawOa5wCtKbu7ZECrmS26NvtSILynQ66cgkT/RJ4LidJOc3bUESwmU8g==}
+    engines: {node: '>=0.10.0'}
+
   react@18.3.1:
     resolution: {integrity: sha512-wS+hAgJShR0KhEvPJArfuPVN1+Hz1t0Y6n5jLrGQbkb4urgPE/0Rve+1kMB1v/oWgHgm4WIcV+i7F2pTVj+2iQ==}
     engines: {node: '>=0.10.0'}
@@ -4907,6 +4914,9 @@ packages:
     peerDependencies:
       '@tarojs/taro': '>=3.4.x'
       '@tarojs/taro-h5': '>=3.4.x'
+
+  taro-icons@0.4.0:
+    resolution: {integrity: sha512-28kBBw+CFLa2I4mxaKfnkfO1UlVtlh8kezWUxzadUq3cXCkGZ8JxpXOk6yzPVSAxTA2FRTZl8HdXKOZYC7XDdg==}
 
   terser@5.39.0:
     resolution: {integrity: sha512-LBAhFyLho16harJoWMg/nZsQYgTrg5jXOn2nCYjRUcZZEdE3qa2zb8QEDRUGVZBW4rlazf2fxkg8tztybTaqWw==}
@@ -9970,6 +9980,12 @@ snapshots:
 
   react-refresh@0.14.2: {}
 
+  react@16.14.0:
+    dependencies:
+      loose-envify: 1.4.0
+      object-assign: 4.1.1
+      prop-types: 15.8.1
+
   react@18.3.1:
     dependencies:
       loose-envify: 1.4.0
@@ -10609,6 +10625,11 @@ snapshots:
       '@tarojs/taro-h5': 4.0.9(@tarojs/components@4.0.9(@tarojs/helper@4.0.9)(@types/react@18.3.20)(postcss@8.5.3)(react@18.3.1)(rollup@3.29.5))(@tarojs/taro@4.0.9(@tarojs/components@4.0.9(@tarojs/helper@4.0.9)(@types/react@18.3.20)(postcss@8.5.3)(react@18.3.1)(rollup@3.29.5))(@tarojs/helper@4.0.9)(@tarojs/shared@4.0.9)(@types/react@18.3.20)(postcss@8.5.3)(rollup@3.29.5))
       lodash-wechat: 1.0.0
       querystring: 0.2.1
+
+  taro-icons@0.4.0:
+    dependencies:
+      prop-types: 15.8.1
+      react: 16.14.0
 
   terser@5.39.0:
     dependencies:

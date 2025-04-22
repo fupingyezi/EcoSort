@@ -9,16 +9,19 @@ interface props {
   setImgUrl: (value: string) => void;
   isOverlay: boolean;
   type: "op" | "user";
+  setContent?: (content: string) => void;
 }
 
 const AlbumWindow: React.FC<props> = memo(({ ...props }) => {
-  const { isVisiable, setIsVisible, setImgUrl, isOverlay, type } = props;
+  const { isVisiable, setIsVisible, setImgUrl, isOverlay, type, setContent } =
+    props;
   const handleClick = (sourceType: "album" | "camera") => {
     handleChooseImage({
       setIsVisible,
       setImgUrl,
       requestType: type,
       sourceType,
+      setContent
     });
   };
   return (

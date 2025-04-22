@@ -1,14 +1,14 @@
 import { View, Image } from "@tarojs/components";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Taro, {
   requirePlugin,
   showToast,
   useDidShow,
-  useUnload,
 } from "@tarojs/taro";
 import MyNavigation from "@/common/modules/myNavigation/myNavigation";
 import { Primary, Ongoing, Finished } from "@/components/voiceProfile";
 import "./index.scss";
+import { post } from "@/common/utils/request";
 import back from "@/common/assets/classify/city.svg";
 import mic1 from "@/common/assets/classify/mic1.svg";
 import mic2 from "@/common/assets/classify/mic2.svg";
@@ -32,6 +32,7 @@ const Index = () => {
   let longPressTimer;
 
   const handleClick = () => {
+    post("/ecosort/speech", { message: '香蕉皮是什么垃圾' });
     if (condition === "finished") setCondition("primary");
     else {
       Taro.showToast({
@@ -48,7 +49,7 @@ const Index = () => {
   const initRecord = () => {
     manager.onStart = () => {
       console.log("开始录音");
-    }
+    };
     manager.onStop = (res) => {
       Taro.hideLoading();
       if (res.result) {
@@ -66,13 +67,13 @@ const Index = () => {
     manager.onError = (err) => {
       Taro.hideLoading();
       console.log(err);
-        showToast({
-          title: `识别失败(${err.retcode})`,
-          duration: 1000,
-          icon: "none",
-        });
-        setCondition("primary");
-    }
+      showToast({
+        title: `识别失败(${err.retcode})`,
+        duration: 1000,
+        icon: "none",
+      });
+      setCondition("primary");
+    };
   };
 
   useDidShow(initRecord);
@@ -112,7 +113,7 @@ const Index = () => {
         <View className="classifyVoice-content">
           {condition === "primary" && <Primary />}
           {condition === "ongoing" && <Ongoing />}
-          {condition === "finished" && <Finished />}
+          {condition === "finished" && <Finished content={content} />}
         </View>
         <Image
           src={back}
@@ -124,6 +125,7 @@ const Index = () => {
           style={`${bgc}`}
           onLongPress={onLongPress}
           onTouchEnd={onTouchEnd}
+          onClick={() => handleClick()}
         >
           <Image
             src={img}

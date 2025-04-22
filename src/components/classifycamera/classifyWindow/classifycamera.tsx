@@ -12,8 +12,7 @@ const ClassifyCamera: React.FC<{
 }> = memo(({ setIsSelectedCamera }) => {
   const [isShow, setIsShow] = useState(false);
   const [imgUrl, setImgUrl] = useState("");
-  const content =
-    "废旧电池是有害垃圾，处理时应回收在特殊处理场所或者投入专门的有害垃圾垃圾桶，尤其不能埋在土地里！";
+  const [content, setContent] = useState("");
 
   return (
     <>
@@ -82,6 +81,7 @@ const ClassifyCamera: React.FC<{
           type="op"
           setImgUrl={setImgUrl}
           isOverlay={false}
+          setContent={setContent}
         ></AlbumWindow>
       )}
     </>
