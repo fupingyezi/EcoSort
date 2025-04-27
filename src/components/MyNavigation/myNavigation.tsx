@@ -2,7 +2,7 @@ import { View, Image } from "@tarojs/components";
 import "./style.scss";
 import { memo } from "react";
 import backimg from "@/common/assets/frequent/arrow.svg";
-import { navigateBack, switchTab } from "@tarojs/taro";
+import { switchTab } from "@tarojs/taro";
 
 interface props {
   type: "tab" | "normal";
@@ -14,6 +14,7 @@ const MyNavigation: React.FC<props> = memo(({ type, url, title }) => {
   const handleClick = (url) => {
     switchTab({ url: url });
   };
+
   switch (type) {
     case "tab": {
       return (

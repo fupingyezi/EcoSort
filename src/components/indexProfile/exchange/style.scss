@@ -1,0 +1,47 @@
+.exchange-container {
+    background-color: #f9f8fc;
+    width: 90%;
+    overflow: hidden;
+    margin: 0 auto;
+    .exchange-item {
+        width: 360rpx;
+        display: flex;
+        flex-direction: column;
+        border-radius: 15rpx 15rpx 0 0;
+        > .exchange-img {
+            width: 100%;
+            border-radius: 15rpx 15rpx 0 0;
+        }
+    }
+    .exchange-content {
+        width: 100%;
+        background-color: #fff;
+        padding: 20rpx 10rpx;
+        font-family: SimHei;
+        display: flex;
+        flex-direction: column;
+        gap: 20rpx;
+        border-radius: 0 0 15rpx 15rpx;
+        &-text1 {
+            // font-family: 'Source Han Serif CN';
+            font-size: 26rpx;
+            color: #0A0A0A;
+        }
+        &-text2 {
+            // font-family: "Alimama DongFangDaKai";
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: nowrap;
+            &-item1 {
+                font-size: 32rpx;
+                color: #AB5356;
+            }
+            &-item2 {
+                font-size: 22rpx;
+                color: #606060;
+                width: 40%;
+            }
+        }
+    }
+}

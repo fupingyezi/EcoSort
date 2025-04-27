@@ -1,16 +1,14 @@
 import React from 'react';
 import { View, Image } from "@tarojs/components";
-import img1 from "@/common/assets/index/index1.svg";
+import useImgStore from '@/store/imgStore';
 
-interface IndexContentProps {
-  // 若后续有需要传递的属性，可以在这里定义
-}
-
-const IndexContent: React.FC<IndexContentProps> = React.memo(() => {
+const IndexContent: React.FC= React.memo(() => {
+  const { indexImg } = useImgStore(); // 从状态管理获取
+  
   return (
     <View className="index-content">
       <Image
-        src={img1}
+        src={indexImg?.pageImg?.[0] || ""} // 使用状态中的图片
         className="index-header-img"
         mode="widthFix"
       ></Image>

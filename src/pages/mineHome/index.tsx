@@ -1,61 +1,52 @@
 import { View, Image } from "@tarojs/components";
-import MyNavigation from "@/common/modules/myNavigation/myNavigation";
+import MyNavigation from "@/components/MyNavigation/myNavigation";
 import "./index.scss";
 import { navigateTo } from "@tarojs/taro";
-import headphone from "@/common/assets/mineHome/headphone.svg";
-import order1 from "@/common/assets/mineHome/order1.svg";
-import order2 from "@/common/assets/mineHome/order2.svg";
-import order3 from "@/common/assets/mineHome/order3.svg";
-import order4 from "@/common/assets/mineHome/order4.svg";
-import warning from "@/common/assets/index/info.svg";
-import a1 from "@/common/assets/mineHome/arrow1.svg";
-import a2 from "@/common/assets/mineHome/arrow2.svg";
-import a3 from "@/common/assets/mineHome/arrow3.svg";
-import set1 from "@/common/assets/mineHome/setting.svg";
-import set2 from "@/common/assets/mineHome/personalcard.svg";
-import set3 from "@/common/assets/mineHome/message-question.svg";
-import set4 from "@/common/assets/mineHome/book.svg";
-import set5 from "@/common/assets/mineHome/security-user.svg";
+import useUserStore from "@/store/userStore";
+import useImgStore from "@/store/imgStore";
 
 const Index = () => {
+  const { userInfo } = useUserStore();
+  const { pageImg } = useImgStore((state) => state.mineImg);
+
   const order_list: { title: string; img: string }[] = [
     {
       title: "分类记录",
-      img: order1,
+      img: pageImg[1],
     },
     {
       title: "题目练习",
-      img: order2,
+      img: pageImg[2],
     },
     {
       title: "反馈与建议",
-      img: order3,
+      img: pageImg[3],
     },
     {
       title: "我的积分",
-      img: order4,
+      img: pageImg[4],
     },
   ];
   const setting_list: { title: string; img: string }[] = [
     {
       title: "设置",
-      img: set1,
+      img: pageImg[6],
     },
     {
       title: "我的环保记录",
-      img: set2,
+      img: pageImg[7],
     },
     {
       title: "常见问题",
-      img: set3,
+      img: pageImg[8],
     },
     {
       title: "操作手册",
-      img: set4,
+      img: pageImg[9],
     },
     {
       title: "隐私政策",
-      img: set5,
+      img: pageImg[10],
     },
   ];
   const handleClick = (title) => {
@@ -71,16 +62,18 @@ const Index = () => {
       <MyNavigation type="tab" title="个人中心" url="" />
       <View className="mineHome">
         <View className="mineHome-userColumn">
-          <Image src="" className="mineHome-userColumn-avatar"></Image>
-          <View className="mineHome-userColumn-name">后藤一里</View>
-          <View className="mineHome-userColumn-sever">
-            客服
-            <Image
-              src={headphone}
-              mode="widthFix"
-              style={"width:32rpx; margin-left: 10rpx;"}
-            ></Image>
-          </View>
+          <Image
+            src={userInfo.avatar}
+            className="mineHome-userColumn-avatar"
+          ></Image>
+          <View className="mineHome-userColumn-name">{userInfo.username}</View>
+
+          <Image
+            src={pageImg[0]}
+            mode="widthFix"
+            style={"width:50rpx"}
+            onClick={() => navigateTo({ url: "/pages/mineSetting/index" })}
+          ></Image>
         </View>
         <View className="mineHome-orderColumn">
           {order_list.map((item, index) => (
@@ -100,7 +93,7 @@ const Index = () => {
         </View>
         <View className="mineHome-infoColumn">
           <Image
-            src={warning}
+            src={pageImg[5]}
             mode="heightFix"
             style={"height: 32rpx; padding-left: 32rpx"}
           ></Image>
@@ -110,7 +103,7 @@ const Index = () => {
           <View className="mineHome-infoColumn-go">
             立即查看
             <Image
-              src={a1}
+              src={pageImg[11]}
               mode="widthFix"
               style={"width: 24rpx; margin-left: 10rpx;"}
             ></Image>
@@ -131,7 +124,7 @@ const Index = () => {
                 <View className="mineHome-studyColumn-record-text">
                   继续学习
                   <Image
-                    src={a2}
+                    src={pageImg[12]}
                     mode="widthFix"
                     style={"width: 24rpx; margin-left: 10rpx;"}
                   ></Image>
@@ -178,7 +171,7 @@ const Index = () => {
               </View>
               <View className="mineHome-settingColumn-item-arrow">
                 <Image
-                  src={a3}
+                  src={pageImg[13]}
                   mode="widthFix"
                   style={"width: 24rpx; margin-left: 10rpx;"}
                 ></Image>

@@ -1,11 +1,7 @@
 import { View, Image } from "@tarojs/components";
 import { useState } from "react";
-import Taro, {
-  requirePlugin,
-  showToast,
-  useDidShow,
-} from "@tarojs/taro";
-import MyNavigation from "@/common/modules/myNavigation/myNavigation";
+import Taro, { requirePlugin, showToast, useDidShow } from "@tarojs/taro";
+import MyNavigation from "@/components/MyNavigation/myNavigation";
 import { Primary, Ongoing, Finished } from "@/components/voiceProfile";
 import "./index.scss";
 import { post } from "@/common/utils/request";
@@ -31,18 +27,6 @@ const Index = () => {
 
   let longPressTimer;
 
-  const handleClick = () => {
-    post("/ecosort/speech", { message: '香蕉皮是什么垃圾' });
-    if (condition === "finished") setCondition("primary");
-    else {
-      Taro.showToast({
-        duration: 1000,
-        title: "太短了哦",
-        icon: "none",
-      });
-    }
-  };
-
   const plugin = requirePlugin("WechatSI");
   const manager = plugin.getRecordRecognitionManager();
 
@@ -53,8 +37,21 @@ const Index = () => {
     manager.onStop = (res) => {
       Taro.hideLoading();
       if (res.result) {
-        setContent(res.result);
-        setCondition("finished");
+        // 先显示加载状态
+        Taro.showLoading({ title: '生成内容中...' });
+        
+        post("/ecosort/speech", { message: res.result })
+          .then((res) => {
+            setContent(res.data.result);
+            setCondition("finished"); // 数据获取完成后再更新状态
+            Taro.hideLoading();
+          })
+          .catch((error) => {
+            console.error(error);
+            setCondition("primary");
+            Taro.hideLoading();
+            Taro.showToast({ title: '内容生成失败', icon: 'none' });
+          });
       } else {
         setCondition("primary");
         showToast({
@@ -97,8 +94,6 @@ const Index = () => {
     clearTimeout(longPressTimer);
     if (condition === "ongoing") {
       stopRecording();
-    } else {
-      handleClick();
     }
   };
 
@@ -125,7 +120,6 @@ const Index = () => {
           style={`${bgc}`}
           onLongPress={onLongPress}
           onTouchEnd={onTouchEnd}
-          onClick={() => handleClick()}
         >
           <Image
             src={img}

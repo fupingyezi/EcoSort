@@ -61,3 +61,19 @@
     }
   }
 }
+
+.policy-title-item {
+  &.active {
+    background-color: #F5F5F5;
+  }
+}
+
+.policy-list-item-title {
+  font-size: 30rpx;
+  color: #1A1A1A;
+}
+
+.policy-list-item-info {
+  font-size: 24rpx;
+  color: #8C8C8C;
+}

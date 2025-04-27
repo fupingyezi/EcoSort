@@ -9,9 +9,10 @@ export default {
     "pages/examDetail/index",
     "pages/examination/index",
     "pages/feedback/index",
+    "pages/mineSetting/index",
   ],
   tabBar: {
-    color: "#D8D8D8",
+    color: "#D8D8D8",   
     selectedColor: "#12B858",
     backgroundColor: "#fff",
     borderStyle: "white",

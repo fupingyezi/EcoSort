@@ -1,13 +1,10 @@
 import { View, Image } from "@tarojs/components";
-import classNames from "classnames";
+// import classNames from "classnames";
 import { createContext, useState, useCallback, useEffect } from "react";
 import "./index.scss";
 import Question from "@/components/question/question/question";
 import Result from "@/components/question/result/result";
 import back from "@/common/assets/exam/Left.svg";
-import correctIcon from "@/common/assets/exam/right-circle.svg";
-import errorIcon from "@/common/assets/exam/error-circle.svg";
-import finishIcon from "@/common/assets/exam/finish-circle.svg";
 import { navigateTo } from "@tarojs/taro";
 
 export interface IQuestionContext {
@@ -29,17 +26,17 @@ export { QuestionContext };
 const condition_list = [
   {
     type: "correct",
-    icon: correctIcon,
+    icon: "http://image.curryking123.online/%E7%9B%B4%E6%8E%A5%E7%BB%99%E9%93%BE%E6%8E%A5/1.png",
     color: "#12B858",
   },
   {
     type: "error",
-    icon: errorIcon,
+    icon: "http://image.curryking123.online/%E7%9B%B4%E6%8E%A5%E7%BB%99%E9%93%BE%E6%8E%A5/2.png",
     color: "#F5222D",
   },
   {
     type: "finished",
-    icon: finishIcon,
+    icon: "http://image.curryking123.online/%E7%9B%B4%E6%8E%A5%E7%BB%99%E9%93%BE%E6%8E%A5/3.png",
     color: "#8C8C8C",
   },
 ];

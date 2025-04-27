@@ -1,9 +1,10 @@
 import { View, Image } from "@tarojs/components";
 import { memo } from "react";
 import { switchTab } from "@tarojs/taro";
-import resIcon from "@/common/assets/exam/res.svg";
-import personal from "@/common/assets/exam/profile-circle.svg";
 import "./style.scss";
+
+const resIcon = "http://image.curryking123.online/%E7%9B%B4%E6%8E%A5%E7%BB%99%E9%93%BE%E6%8E%A5/answerfinish.png";
+const personal = "http://image.curryking123.online/%E7%9B%B4%E6%8E%A5%E7%BB%99%E9%93%BE%E6%8E%A5/toMine.png";
 
 const Result: React.FC<{ correctNumber: number; subject: string }> = memo(
   ({ correctNumber, subject }) => {

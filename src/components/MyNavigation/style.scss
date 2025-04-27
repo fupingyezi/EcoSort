@@ -1,4 +1,7 @@
+@import '@/app.scss';
+
 .navigation {
+    @extend .globle-font-family;
     width: 100%;
     position: sticky;
     top: 0;
@@ -6,7 +9,6 @@
     background-color: #F5F6FA;
     z-index: 10;
     &-title {
-        font-family: "DingTalk JinBuTi";
         color: #3D3D3D;
         font-size: 48rpx;
         position: absolute;

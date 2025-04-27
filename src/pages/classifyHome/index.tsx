@@ -1,15 +1,14 @@
 import { View, Image } from "@tarojs/components";
-import MyNavigation from "@/common/modules/myNavigation/myNavigation";
+import MyNavigation from "@/components/MyNavigation/myNavigation";
 import ClassifyCamera from "@/components/classifycamera/classifyWindow/classifycamera";
 import "./index.scss";
 import { navigateTo } from "@tarojs/taro";
 import { useState } from "react";
-import icon1 from "@/common/assets/classify/text.svg";
-import icon2 from "@/common/assets/classify/camera.svg";
-import icon3 from "@/common/assets/classify/mic.svg";
+import useImgStore from "@/store/imgStore";
 
 const Index = () => {
   const [isSelectedCamera, setIsSelectedCamera] = useState(false);
+  const { pageImg } = useImgStore((state) => state.classifyImg);
   return (
     <>
       {isSelectedCamera && (
@@ -26,7 +25,7 @@ const Index = () => {
           onClick={() => navigateTo({ url: "/pages/classifyText/index" })}
         >
           <Image
-            src={icon1}
+            src={pageImg[0]}
             mode="heightFix"
             className="classify-item-img"
           ></Image>
@@ -39,7 +38,7 @@ const Index = () => {
         >
           <View className="classify-item-text">图像识别</View>
           <Image
-            src={icon2}
+            src={pageImg[1]}
             mode="heightFix"
             className="classify-item-img"
           ></Image>
@@ -50,7 +49,7 @@ const Index = () => {
           onClick={() => navigateTo({ url: "/pages/classifyVoice/index" })}
         >
           <Image
-            src={icon3}
+            src={pageImg[2]}
             mode="heightFix"
             className="classify-item-img"
           ></Image>

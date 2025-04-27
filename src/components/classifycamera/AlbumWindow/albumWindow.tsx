@@ -1,32 +1,31 @@
 import { PageContainer, View, Button } from "@tarojs/components";
-import { memo } from "react";
+import { memo, useContext } from "react";
 import "./style.scss";
 import handleChooseImage from "@/common/utils/handleGetImg";
+import { CameraIdentifyContext } from "../classifyWindow/classifycamera";
 
 interface props {
-  isVisiable: boolean;
+  isVisible: boolean;
   setIsVisible: (value: boolean) => void;
-  setImgUrl: (value: string) => void;
   isOverlay: boolean;
   type: "op" | "user";
-  setContent?: (content: string) => void;
 }
 
 const AlbumWindow: React.FC<props> = memo(({ ...props }) => {
-  const { isVisiable, setIsVisible, setImgUrl, isOverlay, type, setContent } =
-    props;
+  const { isVisible, setIsVisible, isOverlay, type } = props;
+  console.log("AlbumWindow", props);
+  const { setRes } = useContext(CameraIdentifyContext || {});
   const handleClick = (sourceType: "album" | "camera") => {
     handleChooseImage({
       setIsVisible,
-      setImgUrl,
+      setRes,
       requestType: type,
       sourceType,
-      setContent
     });
   };
   return (
     <PageContainer
-      show={isVisiable}
+      show={isVisible}
       overlay={isOverlay}
       position="bottom"
       onLeave={() => setIsVisible(false)}

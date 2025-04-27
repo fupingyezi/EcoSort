@@ -47,6 +47,7 @@
     display: flex;
     color: #1A1A1A;
     justify-content: space-between;
+    align-items: center;
     &-content {
         height: 100rpx;
         font-size: 28rpx;
@@ -63,4 +64,8 @@
         background-color: rgba(245, 34, 45, 0.1);
         color: #F5222D;
     }
+}
+
+.option-img {
+    height: 48rpx;
 }

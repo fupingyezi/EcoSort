@@ -51,7 +51,7 @@
       }
     }
     &-img {
-      width: 330rpx;
+      // width: 330rpx;
       height: 298rpx;
     }
     &-text {
@@ -65,6 +65,7 @@
             color: #18181B;
             line-height: 70rpx;
             width: 520rpx;
+            min-height: 300rpx;
         }
     }
   }

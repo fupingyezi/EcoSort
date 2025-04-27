@@ -1,6 +1,7 @@
 import { View, Image, Input } from "@tarojs/components";
 import { useState } from "react";
-import MyNavigation from "@/common/modules/myNavigation/myNavigation";
+import MyNavigation from "@/components/MyNavigation/myNavigation";
+import useImgStore from "@/store/imgStore";
 import {
   Knowledge,
   Policy,
@@ -9,60 +10,17 @@ import {
 } from "@/components/indexProfile";
 import LoginWindow from "@/components/loginWindow/loginWindow";
 import "./index.scss";
-import img2 from "@/common/assets/index/info.svg";
 import arrowLeft from "@/common/assets/index/arrow-left.svg";
-import c1 from "@/common/assets/index/icon1.svg";
-import c2 from "@/common/assets/index/icon2.svg";
-import c3 from "@/common/assets/index/icon3.svg";
-import c4 from "@/common/assets/index/icon4.svg";
-import actc1 from "@/common/assets/index/icon1Act.svg";
-import actc2 from "@/common/assets/index/icon2Act.svg";
-import actc3 from "@/common/assets/index/icon3Act.svg";
-import actc4 from "@/common/assets/index/icon4Act.svg";
 import search from "@/common/assets/index/search.svg";
 import classNames from "classnames";
-import IndexContent from "@/components/indexContent/IndexContent";
+import IndexContent from "@/components/indexContent/indexContent";
 
 interface choiceType {
   img: string;
   imgAct: string;
-  type: "c1" | "c2" | "c3" | "c4"; //四个选项
+  type: "c1" | "c2" | "c3" | "c4"; 
   text: string;
 }
-
-const choiceList: choiceType[] = [
-  {
-    img: c1,
-    imgAct: actc1,
-    type: "c1",
-    text: "知识库",
-  },
-  {
-    img: c2,
-    imgAct: actc2,
-    type: "c2",
-    text: "各地政策",
-  },
-  {
-    img: c3,
-    imgAct: actc3,
-    type: "c3",
-    text: "社区活动",
-  },
-  {
-    img: c4,
-    imgAct: actc4,
-    type: "c4",
-    text: "积分兑换",
-  },
-];
-
-const placeholderText = {
-  c1: "想要了解哪些知识？",
-  c2: "最新政策 实时把控",
-  c3: "搜索社区热门活动~",
-  c4: "搜索心仪的商品吧~",
-};
 
 const Index = () => {
   const [selectedPage, setSelectedPage] = useState<"c1" | "c2" | "c3" | "c4">(
@@ -72,6 +30,41 @@ const Index = () => {
   const [status, setStatus] = useState<"login_begin" | "get_phone">(
     "login_begin",
   );
+  const { indexImg } = useImgStore(); 
+  
+  const choiceList: choiceType[] = [
+    {
+      img: indexImg.pageImg[2] || "",
+      imgAct: indexImg.pageImg[6] || "",
+      type: "c1",
+      text: "知识库",
+    },
+    {
+      img: indexImg.pageImg[3] || "",
+      imgAct: indexImg.pageImg[7] || "",
+      type: "c2",
+      text: "各地政策",
+    },
+    {
+      img: indexImg.pageImg[4] || "",
+      imgAct: indexImg.pageImg[8] || "",
+      type: "c3",
+      text: "社区活动",
+    },
+    {
+      img: indexImg.pageImg[5] || "",
+      imgAct: indexImg.pageImg[9] || "",
+      type: "c4",
+      text: "积分兑换",
+    },
+  ];
+
+  const placeholderText = {
+    c1: "想要了解哪些知识？",
+    c2: "最新政策 实时把控",
+    c3: "搜索社区热门活动~",
+    c4: "搜索心仪的商品吧~",
+  };
 
   const loginWindowContext = {
     isOpen,
@@ -89,7 +82,7 @@ const Index = () => {
           <IndexContent />
           <View className="index-header-info">
             <Image
-              src={img2}
+              src={indexImg.pageImg[1] || ''}
               mode="heightFix"
               className="index-header-info-img"
             ></Image>
@@ -141,10 +134,18 @@ const Index = () => {
           </View>
         </View>
         <View>
-          {selectedPage === "c1" && <Knowledge />}
-          {selectedPage === "c2" && <Policy />}
-          {selectedPage === "c3" && <Community />}
-          {selectedPage === "c4" && <Exchange />}
+          <View style={{display: selectedPage === "c1" ? 'flex' : 'none'}}>
+            <Knowledge />
+          </View>
+          <View style={{display: selectedPage === "c2" ? 'flex' : 'none'}}>
+            <Policy />
+          </View>
+          <View style={{display: selectedPage === "c3" ? 'flex' : 'none'}}>
+            <Community />
+          </View>
+          <View style={{display: selectedPage === "c4" ? 'flex' : 'none'}}>
+            <Exchange />
+          </View>
         </View>
       </View>
     </>

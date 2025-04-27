@@ -1,25 +1,55 @@
 import { View, Image, Button } from "@tarojs/components";
-import { useState } from "react";
+import { useState, createContext } from "react";
 import { memo } from "react";
 import "./style.scss";
 import img from "@/common/assets/classify/camera2.svg";
 import AlbumWindow from "../AlbumWindow/albumWindow";
-import warning from "@/common/assets/classify/warning.svg";
-import test from "@/common/assets/classify/test.png";
+import useImgStore from "@/store/imgStore";
+import { processContent } from "@/components/voiceProfile/finished/finished";
+
+export interface ICameraIdentifyConext {
+  setRes: (res: CameraIdentifyRes) => void;
+}
+
+export const CameraIdentifyContext = createContext<ICameraIdentifyConext>({
+  setRes: () => {},
+});
+
+export interface CameraIdentifyRes {
+  imgUrl: string;
+  content: string;
+  category: string;
+}
 
 const ClassifyCamera: React.FC<{
   setIsSelectedCamera: (isSelect: boolean) => void;
 }> = memo(({ setIsSelectedCamera }) => {
   const [isShow, setIsShow] = useState(false);
-  const [imgUrl, setImgUrl] = useState("");
-  const [content, setContent] = useState("");
+  const [identifyRes, setIdentifyRes] = useState<CameraIdentifyRes>({
+    imgUrl: "",
+    content: "",
+    category: "",
+  });
+  const { classifyImg } = useImgStore((state) => state.classifyImg);
+  const categoryImg = {
+    可回收物: classifyImg.recyclable || "",
+    其他垃圾: classifyImg.other || "",
+    有害垃圾: classifyImg.hazardous || "",
+    厨余垃圾: classifyImg.kitchen || "",
+  };
+
+  const passesContext: ICameraIdentifyConext = {
+    setRes: (res: CameraIdentifyRes) => {
+      setIdentifyRes(res);
+    },
+  };
 
   return (
     <>
       <View className="classifycamera">
         <View className="classifycamera-back"></View>
         <View className="classifycamera-window">
-          {imgUrl === "" && (
+          {identifyRes.imgUrl === "" && (
             <>
               <Image
                 src={img}
@@ -47,7 +77,7 @@ const ClassifyCamera: React.FC<{
               </View>
             </>
           )}
-          {imgUrl !== "" && (
+          {identifyRes.imgUrl !== "" && (
             <>
               <View
                 className="classifycamera-window-cancle"
@@ -56,18 +86,18 @@ const ClassifyCamera: React.FC<{
                 ×
               </View>
               <Image
-                src={test}
-                mode="aspectFit"
+                src={identifyRes.imgUrl}
+                mode="heightFix"
                 className="classifycamera-window-img"
               ></Image>
               <View className="classifycamera-window-text">
                 <Image
-                  src={warning}
+                  src={categoryImg[identifyRes.category] || ""}
                   mode="widthFix"
                   className="classifycamera-window-text-img"
                 ></Image>
                 <View className="classifycamera-window-text-content">
-                  {content}
+                  {processContent(identifyRes.content)}
                 </View>
               </View>
             </>
@@ -75,14 +105,14 @@ const ClassifyCamera: React.FC<{
         </View>
       </View>
       {isShow && (
-        <AlbumWindow
-          isVisiable={isShow}
-          setIsVisible={setIsShow}
-          type="op"
-          setImgUrl={setImgUrl}
-          isOverlay={false}
-          setContent={setContent}
-        ></AlbumWindow>
+        <CameraIdentifyContext.Provider value={passesContext}>
+          <AlbumWindow
+            isVisible={isShow}
+            setIsVisible={setIsShow}
+            type="op"
+            isOverlay={false}
+          ></AlbumWindow>
+        </CameraIdentifyContext.Provider>
       )}
     </>
   );

@@ -4,7 +4,7 @@ import "./index.scss";
 import flower from "@/common/assets/feedback/flower.svg";
 import eStar from "@/common/assets/feedback/empty-star.svg";
 import fStar from "@/common/assets/feedback/full-star.svg";
-import MyNavigation from "@/common/modules/myNavigation/myNavigation";
+import MyNavigation from "@/components/MyNavigation/myNavigation";
 
 const Index = () => {
   const [maxStarIndex, setMaxStarIndex] = useState<number>(1);

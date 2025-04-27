@@ -20,16 +20,17 @@ export const handleLogin = async (
       },
     });
 
-    if (response.statusCode === 0) {
+    const data = response.data;
+    
+    if (data.code !== 0 ) {
       throw new Error("微信登录失败");
     }
 
-    const data = response.data;
-    console.log("登录成功", data);
-    setUserInfo(data.userInfo);
+    const { username, avatar, token } = data.data; 
+    setUserInfo({ username, avatar });
     setLogin(true);
-    console.log("登录成功", data);
-    Taro.setStorageSync("token", data.token);
+    console.log("登录成功", data.data);
+    Taro.setStorageSync("token", token);
   } catch (error) {
     console.error("微信授权登录出错", error);
   }

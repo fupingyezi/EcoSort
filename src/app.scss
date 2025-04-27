@@ -1,7 +1,12 @@
-@import './common/font/DingTalkJinBuTi.css';
+// @import './common/font/DingTalkJinBuTi.css';
+
 // @import "~taro-ui/dist/style/components/icon.scss";
   
 // @import 'taro-icons/scss/MaterialCommunityIcons.scss';
 // @import 'taro-icons/scss/MaterialIcons.scss';
 // @import 'taro-icons/scss/Ionicons.scss';
 // @import 'taro-icons/scss/FontAwesome.scss';
+
+.globle-font-family {
+    font-family: 'DingTalk JinBuTi';
+}
