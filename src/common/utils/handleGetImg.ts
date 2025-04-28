@@ -33,23 +33,25 @@ const handleChooseImage = ({
         });
         console.log(item);
         if (requestType === "user") {
-          const imgUrl = fetchToQiniu(item.path);
-          const newUserInfo = { username: userInfo.username, avatar: imgUrl };
-          post("/user/update", newUserInfo, "application/json", true)
-            .then((res) => {
-              if (setUserInfo) setUserInfo(res.data);
-              setIsVisible(false); // 移到成功回调内
-              Taro.hideLoading();
-            })
-            .catch((err) => {
-              // 移除 setIsVisible(false)
-              Taro.hideLoading();
-              Taro.showToast({
-                title: `上传头像失败(${err.errMsg})`,
-                duration: 1000,
-                icon: "none",
+          fetchToQiniu(item.path).then((imgUrl) => {
+            console.log(imgUrl);
+            const newUserInfo = { username: userInfo.username, avatar: imgUrl };
+            post("/user/update", newUserInfo, "application/json", true)
+              .then((res) => {
+                if (setUserInfo) setUserInfo(res.data);
+                setIsVisible(false); // 移到成功回调内
+                Taro.hideLoading();
+              })
+              .catch((err) => {
+                // 移除 setIsVisible(false)
+                Taro.hideLoading();
+                Taro.showToast({
+                  title: `上传头像失败(${err.errMsg})`,
+                  duration: 1000,
+                  icon: "none",
+                });
               });
-            });
+          });
         } else {
           post("/ecosort/detect", { file: item.path }, "multipart/form-data")
             .then((res) => {

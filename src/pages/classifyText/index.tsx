@@ -16,11 +16,18 @@ interface itemProps {
 const Index = () => {
   const [searchDocument, setSearchDocument] = useState<itemProps[]>([]);
   const [searchValue, setSearchValue] = useState("");
+  const [isSearch, setIsSearch] = useState<boolean>(false);
   useEffect(() => {
     get("/ecosort/search-list", true)
       .then((res) => {
-        console.log(res.data);
-        setSearchDocument(res.data);
+        const formattedData = res.data.map((item) => ({
+          ...item,
+          objname: item.keyword,
+          id: item.id,
+          classify: item.classify,
+          attention: item.attention,
+        }));
+        setSearchDocument(formattedData);
       })
       .catch((err) => {
         console.log(err);
@@ -28,9 +35,32 @@ const Index = () => {
   }, []);
 
   const handleSearch = () => {
+    if (searchValue === "") {
+      get("/ecosort/search-list", true)
+        .then((res) => {
+          const formattedData = res.data.map((item) => ({
+            ...item,
+            objname: item.keyword,
+            id: item.id,
+            classify: item.classify,
+            attention: item.attention,
+          }));
+          setSearchDocument(formattedData);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+      setIsSearch(false);
+      return;
+    }
     post("/ecosort/text", { text: searchValue }, "application/json", true)
       .then((res) => {
+        // const formattedData = res.data.map((item) => ({
+        //   ...item,
+        //   objname: item.keyword,
+        // }));
         setSearchDocument(res.data);
+        setIsSearch(true);
       })
       .catch((err) => {
         console.log(err);
@@ -64,7 +94,10 @@ const Index = () => {
             <Image src={search} mode="heightFix" style={"height:39rpx"}></Image>
           </View>
         </View>
-        <View className="classifyText-title">总查询记录</View>
+        {!isSearch && (
+          <View className="classifyText-titleall">总查询记录</View>
+        )}
+        {isSearch && <View className="classifyText-title">查询结果</View>}
         <View className="classifyText-form">
           <View className="classifyText-form-meter">
             <View className="meter1">序号</View>

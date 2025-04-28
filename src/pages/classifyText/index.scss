@@ -43,6 +43,11 @@
     height: 62rpx;
     line-height: 62rpx;
   }
+  &-titleall {
+    @extend .classifyText-title;
+    width: 100%;
+    text-align: center;
+  }
   &-form {
     display: flex;
     flex-direction: column;

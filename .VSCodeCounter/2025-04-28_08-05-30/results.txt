@@ -1,0 +1,225 @@
+Date : 2025-04-28 08:05:30
+Directory : e:\project\arc\EcoSort\EcoSort\src
+Total : 143 files,  4394 codes, 35 comments, 297 blanks, all 4726 lines
+
+Languages
++----------------+------------+------------+------------+------------+------------+
+| language       | files      | code       | comment    | blank      | total      |
++----------------+------------+------------+------------+------------+------------+
+| TypeScript JSX |         30 |      1,991 |         20 |        167 |      2,178 |
+| SCSS           |         28 |      1,667 |         10 |         67 |      1,744 |
+| TypeScript     |         22 |        652 |          5 |         62 |        719 |
+| XML            |         62 |         62 |          0 |          0 |         62 |
+| HTML           |          1 |         22 |          0 |          1 |         23 |
++----------------+------------+------------+------------+------------+------------+
+
+Directories
++------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                           | files      | code       | comment    | blank      | total      |
++------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                              |        143 |      4,394 |         35 |        297 |      4,726 |
+| . (Files)                                                                                      |          4 |        111 |          7 |         15 |        133 |
+| common                                                                                         |         69 |        488 |          4 |         32 |        524 |
+| common\assets                                                                                  |         62 |         62 |          0 |          0 |         62 |
+| common\assets\classify                                                                         |         14 |         14 |          0 |          0 |         14 |
+| common\assets\classify (Files)                                                                 |         10 |         10 |          0 |          0 |         10 |
+| common\assets\classify\aniBack                                                                 |          4 |          4 |          0 |          0 |          4 |
+| common\assets\exam                                                                             |         11 |         11 |          0 |          0 |         11 |
+| common\assets\feedback                                                                         |          3 |          3 |          0 |          0 |          3 |
+| common\assets\frequent                                                                         |          1 |          1 |          0 |          0 |          1 |
+| common\assets\index                                                                            |         13 |         13 |          0 |          0 |         13 |
+| common\assets\loading                                                                          |          3 |          3 |          0 |          0 |          3 |
+| common\assets\mineHome                                                                         |         14 |         14 |          0 |          0 |         14 |
+| common\assets\tabbar                                                                           |          3 |          3 |          0 |          0 |          3 |
+| common\exam                                                                                    |          1 |         96 |          0 |          2 |         98 |
+| common\test                                                                                    |          1 |         28 |          0 |          2 |         30 |
+| common\type                                                                                    |          1 |         27 |          0 |          3 |         30 |
+| common\utils                                                                                   |          4 |        275 |          4 |         25 |        304 |
+| components                                                                                     |         35 |      1,784 |         16 |        115 |      1,915 |
+| components\AlbumWindow                                                                         |          2 |         91 |          0 |         11 |        102 |
+| components\MyNavigation                                                                        |          2 |         63 |          0 |          6 |         69 |
+| components\classifyList                                                                        |          2 |          0 |          0 |          2 |          2 |
+| components\classifycamera                                                                      |          4 |        259 |          1 |         14 |        274 |
+| components\classifycamera\AlbumWindow                                                          |          2 |         67 |          0 |          4 |         71 |
+| components\classifycamera\classifyWindow                                                       |          2 |        192 |          1 |         10 |        203 |
+| components\examChoice                                                                          |          2 |        157 |          0 |          7 |        164 |
+| components\indexContent                                                                        |          1 |         27 |          0 |          3 |         30 |
+| components\indexProfile                                                                        |          9 |        532 |          4 |         30 |        566 |
+| components\indexProfile (Files)                                                                |          1 |          5 |          0 |          1 |          6 |
+| components\indexProfile\community                                                              |          2 |        160 |          0 |          7 |        167 |
+| components\indexProfile\exchange                                                               |          2 |         95 |          4 |          3 |        102 |
+| components\indexProfile\knowledge                                                              |          2 |        104 |          0 |          8 |        112 |
+| components\indexProfile\policy                                                                 |          2 |        168 |          0 |         11 |        179 |
+| components\loginWindow                                                                         |          2 |        124 |         11 |          9 |        144 |
+| components\question                                                                            |          4 |        333 |          0 |         18 |        351 |
+| components\question\question                                                                   |          2 |        174 |          0 |         13 |        187 |
+| components\question\result                                                                     |          2 |        159 |          0 |          5 |        164 |
+| components\voiceProfile                                                                        |          7 |        198 |          0 |         15 |        213 |
+| components\voiceProfile (Files)                                                                |          1 |          4 |          0 |          2 |          6 |
+| components\voiceProfile\finished                                                               |          2 |         57 |          0 |          6 |         63 |
+| components\voiceProfile\ongoing                                                                |          2 |        104 |          0 |          5 |        109 |
+| components\voiceProfile\primary                                                                |          2 |         33 |          0 |          2 |         35 |
+| pages                                                                                          |         33 |      1,927 |          8 |        127 |      2,062 |
+| pages\classifyCamera                                                                           |          3 |         11 |          0 |          5 |         16 |
+| pages\classifyHome                                                                             |          3 |         99 |          0 |          4 |        103 |
+| pages\classifyText                                                                             |          3 |        259 |          4 |         14 |        277 |
+| pages\classifyVoice                                                                            |          3 |        196 |          1 |         20 |        217 |
+| pages\examDetail                                                                               |          3 |        221 |          1 |         18 |        240 |
+| pages\examination                                                                              |          3 |         73 |          0 |          6 |         79 |
+| pages\feedback                                                                                 |          3 |         91 |          0 |          5 |         96 |
+| pages\indexHome                                                                                |          3 |        294 |          1 |         25 |        320 |
+| pages\loading                                                                                  |          3 |        112 |          0 |          6 |        118 |
+| pages\mineHome                                                                                 |          3 |        366 |          0 |          8 |        374 |
+| pages\mineSetting                                                                              |          3 |        205 |          1 |         16 |        222 |
+| store                                                                                          |          2 |         84 |          0 |          8 |         92 |
++------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++------------------------------------------------------------------------------------------------+----------------+------------+------------+------------+------------+
+| filename                                                                                       | language       | code       | comment    | blank      | total      |
++------------------------------------------------------------------------------------------------+----------------+------------+------------+------------+------------+
+| e:\project\arc\EcoSort\EcoSort\src\app.config.ts                                               | TypeScript     |         53 |          0 |          2 |         55 |
+| e:\project\arc\EcoSort\EcoSort\src\app.scss                                                    | SCSS           |          3 |          6 |          3 |         12 |
+| e:\project\arc\EcoSort\EcoSort\src\app.ts                                                      | TypeScript     |         33 |          1 |          9 |         43 |
+| e:\project\arc\EcoSort\EcoSort\src\common\assets\classify\aniBack\aniBack1.svg                 | XML            |          1 |          0 |          0 |          1 |
+| e:\project\arc\EcoSort\EcoSort\src\common\assets\classify\aniBack\aniBack2.svg                 | XML            |          1 |          0 |          0 |          1 |
+| e:\project\arc\EcoSort\EcoSort\src\common\assets\classify\aniBack\aniBack3.svg                 | XML            |          1 |          0 |          0 |          1 |
+| e:\project\arc\EcoSort\EcoSort\src\common\assets\classify\aniBack\aniBack4.svg                 | XML            |          1 |          0 |          0 |          1 |
+| e:\project\arc\EcoSort\EcoSort\src\common\assets\classify\camera.svg                           | XML            |          1 |          0 |          0 |          1 |
+| e:\project\arc\EcoSort\EcoSort\src\common\assets\classify\camera2.svg                          | XML            |          1 |          0 |          0 |          1 |
+| e:\project\arc\EcoSort\EcoSort\src\common\assets\classify\city.svg                             | XML            |          1 |          0 |          0 |          1 |
+| e:\project\arc\EcoSort\EcoSort\src\common\assets\classify\mic.svg                              | XML            |          1 |          0 |          0 |          1 |
+| e:\project\arc\EcoSort\EcoSort\src\common\assets\classify\mic1.svg                             | XML            |          1 |          0 |          0 |          1 |
+| e:\project\arc\EcoSort\EcoSort\src\common\assets\classify\mic2.svg                             | XML            |          1 |          0 |          0 |          1 |
+| e:\project\arc\EcoSort\EcoSort\src\common\assets\classify\search2.svg                          | XML            |          1 |          0 |          0 |          1 |
+| e:\project\arc\EcoSort\EcoSort\src\common\assets\classify\text.svg                             | XML            |          1 |          0 |          0 |          1 |
+| e:\project\arc\EcoSort\EcoSort\src\common\assets\classify\voiceLogo.svg                        | XML            |          1 |          0 |          0 |          1 |
+| e:\project\arc\EcoSort\EcoSort\src\common\assets\classify\warning.svg                          | XML            |          1 |          0 |          0 |          1 |
+| e:\project\arc\EcoSort\EcoSort\src\common\assets\exam\Left.svg                                 | XML            |          1 |          0 |          0 |          1 |
+| e:\project\arc\EcoSort\EcoSort\src\common\assets\exam\arrow-right.svg                          | XML            |          1 |          0 |          0 |          1 |
+| e:\project\arc\EcoSort\EcoSort\src\common\assets\exam\correct.svg                              | XML            |          1 |          0 |          0 |          1 |
+| e:\project\arc\EcoSort\EcoSort\src\common\assets\exam\error-circle.svg                         | XML            |          1 |          0 |          0 |          1 |
+| e:\project\arc\EcoSort\EcoSort\src\common\assets\exam\error.svg                                | XML            |          1 |          0 |          0 |          1 |
+| e:\project\arc\EcoSort\EcoSort\src\common\assets\exam\exam-back.svg                            | XML            |          1 |          0 |          0 |          1 |
+| e:\project\arc\EcoSort\EcoSort\src\common\assets\exam\finish-circle.svg                        | XML            |          1 |          0 |          0 |          1 |
+| e:\project\arc\EcoSort\EcoSort\src\common\assets\exam\profile-circle.svg                       | XML            |          1 |          0 |          0 |          1 |
+| e:\project\arc\EcoSort\EcoSort\src\common\assets\exam\res.svg                                  | XML            |          1 |          0 |          0 |          1 |
+| e:\project\arc\EcoSort\EcoSort\src\common\assets\exam\right-circle.svg                         | XML            |          1 |          0 |          0 |          1 |
+| e:\project\arc\EcoSort\EcoSort\src\common\assets\exam\title-icon.svg                           | XML            |          1 |          0 |          0 |          1 |
+| e:\project\arc\EcoSort\EcoSort\src\common\assets\feedback\empty-star.svg                       | XML            |          1 |          0 |          0 |          1 |
+| e:\project\arc\EcoSort\EcoSort\src\common\assets\feedback\flower.svg                           | XML            |          1 |          0 |          0 |          1 |
+| e:\project\arc\EcoSort\EcoSort\src\common\assets\feedback\full-star.svg                        | XML            |          1 |          0 |          0 |          1 |
+| e:\project\arc\EcoSort\EcoSort\src\common\assets\frequent\arrow.svg                            | XML            |          1 |          0 |          0 |          1 |
+| e:\project\arc\EcoSort\EcoSort\src\common\assets\index\arrow-left.svg                          | XML            |          1 |          0 |          0 |          1 |
+| e:\project\arc\EcoSort\EcoSort\src\common\assets\index\close-outline.svg                       | XML            |          1 |          0 |          0 |          1 |
+| e:\project\arc\EcoSort\EcoSort\src\common\assets\index\icon1.svg                               | XML            |          1 |          0 |          0 |          1 |
+| e:\project\arc\EcoSort\EcoSort\src\common\assets\index\icon1Act.svg                            | XML            |          1 |          0 |          0 |          1 |
+| e:\project\arc\EcoSort\EcoSort\src\common\assets\index\icon2.svg                               | XML            |          1 |          0 |          0 |          1 |
+| e:\project\arc\EcoSort\EcoSort\src\common\assets\index\icon2Act.svg                            | XML            |          1 |          0 |          0 |          1 |
+| e:\project\arc\EcoSort\EcoSort\src\common\assets\index\icon3.svg                               | XML            |          1 |          0 |          0 |          1 |
+| e:\project\arc\EcoSort\EcoSort\src\common\assets\index\icon3Act.svg                            | XML            |          1 |          0 |          0 |          1 |
+| e:\project\arc\EcoSort\EcoSort\src\common\assets\index\icon4.svg                               | XML            |          1 |          0 |          0 |          1 |
+| e:\project\arc\EcoSort\EcoSort\src\common\assets\index\icon4Act.svg                            | XML            |          1 |          0 |          0 |          1 |
+| e:\project\arc\EcoSort\EcoSort\src\common\assets\index\index1.svg                              | XML            |          1 |          0 |          0 |          1 |
+| e:\project\arc\EcoSort\EcoSort\src\common\assets\index\info.svg                                | XML            |          1 |          0 |          0 |          1 |
+| e:\project\arc\EcoSort\EcoSort\src\common\assets\index\search.svg                              | XML            |          1 |          0 |          0 |          1 |
+| e:\project\arc\EcoSort\EcoSort\src\common\assets\loading\earth.svg                             | XML            |          1 |          0 |          0 |          1 |
+| e:\project\arc\EcoSort\EcoSort\src\common\assets\loading\littleIcon.svg                        | XML            |          1 |          0 |          0 |          1 |
+| e:\project\arc\EcoSort\EcoSort\src\common\assets\loading\loadingLogo.svg                       | XML            |          1 |          0 |          0 |          1 |
+| e:\project\arc\EcoSort\EcoSort\src\common\assets\mineHome\arrow.svg                            | XML            |          1 |          0 |          0 |          1 |
+| e:\project\arc\EcoSort\EcoSort\src\common\assets\mineHome\arrow1.svg                           | XML            |          1 |          0 |          0 |          1 |
+| e:\project\arc\EcoSort\EcoSort\src\common\assets\mineHome\arrow2.svg                           | XML            |          1 |          0 |          0 |          1 |
+| e:\project\arc\EcoSort\EcoSort\src\common\assets\mineHome\arrow3.svg                           | XML            |          1 |          0 |          0 |          1 |
+| e:\project\arc\EcoSort\EcoSort\src\common\assets\mineHome\book.svg                             | XML            |          1 |          0 |          0 |          1 |
+| e:\project\arc\EcoSort\EcoSort\src\common\assets\mineHome\headphone.svg                        | XML            |          1 |          0 |          0 |          1 |
+| e:\project\arc\EcoSort\EcoSort\src\common\assets\mineHome\message-question.svg                 | XML            |          1 |          0 |          0 |          1 |
+| e:\project\arc\EcoSort\EcoSort\src\common\assets\mineHome\order1.svg                           | XML            |          1 |          0 |          0 |          1 |
+| e:\project\arc\EcoSort\EcoSort\src\common\assets\mineHome\order2.svg                           | XML            |          1 |          0 |          0 |          1 |
+| e:\project\arc\EcoSort\EcoSort\src\common\assets\mineHome\order3.svg                           | XML            |          1 |          0 |          0 |          1 |
+| e:\project\arc\EcoSort\EcoSort\src\common\assets\mineHome\order4.svg                           | XML            |          1 |          0 |          0 |          1 |
+| e:\project\arc\EcoSort\EcoSort\src\common\assets\mineHome\personalcard.svg                     | XML            |          1 |          0 |          0 |          1 |
+| e:\project\arc\EcoSort\EcoSort\src\common\assets\mineHome\security-user.svg                    | XML            |          1 |          0 |          0 |          1 |
+| e:\project\arc\EcoSort\EcoSort\src\common\assets\mineHome\setting.svg                          | XML            |          1 |          0 |          0 |          1 |
+| e:\project\arc\EcoSort\EcoSort\src\common\assets\tabbar\indexIcon.svg                          | XML            |          1 |          0 |          0 |          1 |
+| e:\project\arc\EcoSort\EcoSort\src\common\assets\tabbar\indexIconAct.svg                       | XML            |          1 |          0 |          0 |          1 |
+| e:\project\arc\EcoSort\EcoSort\src\common\assets\tabbar\mineIcon.svg                           | XML            |          1 |          0 |          0 |          1 |
+| e:\project\arc\EcoSort\EcoSort\src\common\exam\examBank.ts                                     | TypeScript     |         96 |          0 |          2 |         98 |
+| e:\project\arc\EcoSort\EcoSort\src\common\test\constValue.ts                                   | TypeScript     |         28 |          0 |          2 |         30 |
+| e:\project\arc\EcoSort\EcoSort\src\common\type\loadingImg.ts                                   | TypeScript     |         27 |          0 |          3 |         30 |
+| e:\project\arc\EcoSort\EcoSort\src\common\utils\handleGetImg.ts                                | TypeScript     |         86 |          4 |          4 |         94 |
+| e:\project\arc\EcoSort\EcoSort\src\common\utils\handleLogin.ts                                 | TypeScript     |         33 |          0 |          5 |         38 |
+| e:\project\arc\EcoSort\EcoSort\src\common\utils\qiniu.ts                                       | TypeScript     |         69 |          0 |          5 |         74 |
+| e:\project\arc\EcoSort\EcoSort\src\common\utils\request.ts                                     | TypeScript     |         87 |          0 |         11 |         98 |
+| e:\project\arc\EcoSort\EcoSort\src\components\AlbumWindow\AlbumWindow1.tsx                     | TypeScript JSX |         50 |          0 |          6 |         56 |
+| e:\project\arc\EcoSort\EcoSort\src\components\AlbumWindow\style.scss                           | SCSS           |         41 |          0 |          5 |         46 |
+| e:\project\arc\EcoSort\EcoSort\src\components\MyNavigation\myNavigation.tsx                    | TypeScript JSX |         40 |          0 |          5 |         45 |
+| e:\project\arc\EcoSort\EcoSort\src\components\MyNavigation\style.scss                          | SCSS           |         23 |          0 |          1 |         24 |
+| e:\project\arc\EcoSort\EcoSort\src\components\classifyList\classifyList.tsx                    | TypeScript JSX |          0 |          0 |          1 |          1 |
+| e:\project\arc\EcoSort\EcoSort\src\components\classifyList\style.scss                          | SCSS           |          0 |          0 |          1 |          1 |
+| e:\project\arc\EcoSort\EcoSort\src\components\classifycamera\AlbumWindow\albumWindow.tsx       | TypeScript JSX |         50 |          0 |          4 |         54 |
+| e:\project\arc\EcoSort\EcoSort\src\components\classifycamera\AlbumWindow\style.scss            | SCSS           |         17 |          0 |          0 |         17 |
+| e:\project\arc\EcoSort\EcoSort\src\components\classifycamera\classifyWindow\classifycamera.tsx | TypeScript JSX |        114 |          0 |          8 |        122 |
+| e:\project\arc\EcoSort\EcoSort\src\components\classifycamera\classifyWindow\style.scss         | SCSS           |         78 |          1 |          2 |         81 |
+| e:\project\arc\EcoSort\EcoSort\src\components\examChoice\examChoice.tsx                        | TypeScript JSX |         83 |          0 |          6 |         89 |
+| e:\project\arc\EcoSort\EcoSort\src\components\examChoice\style.scss                            | SCSS           |         74 |          0 |          1 |         75 |
+| e:\project\arc\EcoSort\EcoSort\src\components\indexContent\indexContent.tsx                    | TypeScript JSX |         27 |          0 |          3 |         30 |
+| e:\project\arc\EcoSort\EcoSort\src\components\indexProfile\community\community.tsx             | TypeScript JSX |         97 |          0 |          6 |        103 |
+| e:\project\arc\EcoSort\EcoSort\src\components\indexProfile\community\style.scss                | SCSS           |         63 |          0 |          1 |         64 |
+| e:\project\arc\EcoSort\EcoSort\src\components\indexProfile\exchange\exchange.tsx               | TypeScript JSX |         50 |          2 |          3 |         55 |
+| e:\project\arc\EcoSort\EcoSort\src\components\indexProfile\exchange\style.scss                 | SCSS           |         45 |          2 |          0 |         47 |
+| e:\project\arc\EcoSort\EcoSort\src\components\indexProfile\index.tsx                           | TypeScript JSX |          5 |          0 |          1 |          6 |
+| e:\project\arc\EcoSort\EcoSort\src\components\indexProfile\knowledge\knowledge.tsx             | TypeScript JSX |         58 |          0 |          6 |         64 |
+| e:\project\arc\EcoSort\EcoSort\src\components\indexProfile\knowledge\style.scss                | SCSS           |         46 |          0 |          2 |         48 |
+| e:\project\arc\EcoSort\EcoSort\src\components\indexProfile\policy\policy.tsx                   | TypeScript JSX |         92 |          0 |          7 |         99 |
+| e:\project\arc\EcoSort\EcoSort\src\components\indexProfile\policy\style.scss                   | SCSS           |         76 |          0 |          4 |         80 |
+| e:\project\arc\EcoSort\EcoSort\src\components\loginWindow\loginWindow.tsx                      | TypeScript JSX |         68 |         11 |          8 |         87 |
+| e:\project\arc\EcoSort\EcoSort\src\components\loginWindow\style.scss                           | SCSS           |         56 |          0 |          1 |         57 |
+| e:\project\arc\EcoSort\EcoSort\src\components\question\question\question.tsx                   | TypeScript JSX |        105 |          0 |         11 |        116 |
+| e:\project\arc\EcoSort\EcoSort\src\components\question\question\style.scss                     | SCSS           |         69 |          0 |          2 |         71 |
+| e:\project\arc\EcoSort\EcoSort\src\components\question\result\result.tsx                       | TypeScript JSX |         58 |          0 |          4 |         62 |
+| e:\project\arc\EcoSort\EcoSort\src\components\question\result\style.scss                       | SCSS           |        101 |          0 |          1 |        102 |
+| e:\project\arc\EcoSort\EcoSort\src\components\voiceProfile\finished\finished.tsx               | TypeScript JSX |         27 |          0 |          5 |         32 |
+| e:\project\arc\EcoSort\EcoSort\src\components\voiceProfile\finished\style.scss                 | SCSS           |         30 |          0 |          1 |         31 |
+| e:\project\arc\EcoSort\EcoSort\src\components\voiceProfile\index.tsx                           | TypeScript JSX |          4 |          0 |          2 |          6 |
+| e:\project\arc\EcoSort\EcoSort\src\components\voiceProfile\ongoing\ongoing.tsx                 | TypeScript JSX |         20 |          0 |          2 |         22 |
+| e:\project\arc\EcoSort\EcoSort\src\components\voiceProfile\ongoing\style.scss                  | SCSS           |         84 |          0 |          3 |         87 |
+| e:\project\arc\EcoSort\EcoSort\src\components\voiceProfile\primary\primary.tsx                 | TypeScript JSX |         12 |          0 |          2 |         14 |
+| e:\project\arc\EcoSort\EcoSort\src\components\voiceProfile\primary\style.scss                  | SCSS           |         21 |          0 |          0 |         21 |
+| e:\project\arc\EcoSort\EcoSort\src\index.html                                                  | HTML           |         22 |          0 |          1 |         23 |
+| e:\project\arc\EcoSort\EcoSort\src\pages\classifyCamera\index.config.ts                        | TypeScript     |          5 |          0 |          1 |          6 |
+| e:\project\arc\EcoSort\EcoSort\src\pages\classifyCamera\index.scss                             | SCSS           |          0 |          0 |          1 |          1 |
+| e:\project\arc\EcoSort\EcoSort\src\pages\classifyCamera\index.tsx                              | TypeScript JSX |          6 |          0 |          3 |          9 |
+| e:\project\arc\EcoSort\EcoSort\src\pages\classifyHome\index.config.ts                          | TypeScript     |          5 |          0 |          1 |          6 |
+| e:\project\arc\EcoSort\EcoSort\src\pages\classifyHome\index.scss                               | SCSS           |         33 |          0 |          0 |         33 |
+| e:\project\arc\EcoSort\EcoSort\src\pages\classifyHome\index.tsx                                | TypeScript JSX |         61 |          0 |          3 |         64 |
+| e:\project\arc\EcoSort\EcoSort\src\pages\classifyText\index.config.ts                          | TypeScript     |          5 |          0 |          1 |          6 |
+| e:\project\arc\EcoSort\EcoSort\src\pages\classifyText\index.scss                               | SCSS           |        136 |          0 |          7 |        143 |
+| e:\project\arc\EcoSort\EcoSort\src\pages\classifyText\index.tsx                                | TypeScript JSX |        118 |          4 |          6 |        128 |
+| e:\project\arc\EcoSort\EcoSort\src\pages\classifyVoice\index.config.ts                         | TypeScript     |          5 |          0 |          1 |          6 |
+| e:\project\arc\EcoSort\EcoSort\src\pages\classifyVoice\index.scss                              | SCSS           |         58 |          0 |          5 |         63 |
+| e:\project\arc\EcoSort\EcoSort\src\pages\classifyVoice\index.tsx                               | TypeScript JSX |        133 |          1 |         14 |        148 |
+| e:\project\arc\EcoSort\EcoSort\src\pages\examDetail\index.config.ts                            | TypeScript     |          5 |          0 |          1 |          6 |
+| e:\project\arc\EcoSort\EcoSort\src\pages\examDetail\index.scss                                 | SCSS           |         75 |          0 |          0 |         75 |
+| e:\project\arc\EcoSort\EcoSort\src\pages\examDetail\index.tsx                                  | TypeScript JSX |        141 |          1 |         17 |        159 |
+| e:\project\arc\EcoSort\EcoSort\src\pages\examination\index.config.ts                           | TypeScript     |          6 |          0 |          1 |          7 |
+| e:\project\arc\EcoSort\EcoSort\src\pages\examination\index.scss                                | SCSS           |         30 |          0 |          1 |         31 |
+| e:\project\arc\EcoSort\EcoSort\src\pages\examination\index.tsx                                 | TypeScript JSX |         37 |          0 |          4 |         41 |
+| e:\project\arc\EcoSort\EcoSort\src\pages\feedback\index.config.ts                              | TypeScript     |          5 |          0 |          1 |          6 |
+| e:\project\arc\EcoSort\EcoSort\src\pages\feedback\index.scss                                   | SCSS           |         47 |          0 |          1 |         48 |
+| e:\project\arc\EcoSort\EcoSort\src\pages\feedback\index.tsx                                    | TypeScript JSX |         39 |          0 |          3 |         42 |
+| e:\project\arc\EcoSort\EcoSort\src\pages\indexHome\index.config.ts                             | TypeScript     |          5 |          0 |          1 |          6 |
+| e:\project\arc\EcoSort\EcoSort\src\pages\indexHome\index.scss                                  | SCSS           |        141 |          1 |         16 |        158 |
+| e:\project\arc\EcoSort\EcoSort\src\pages\indexHome\index.tsx                                   | TypeScript JSX |        148 |          0 |          8 |        156 |
+| e:\project\arc\EcoSort\EcoSort\src\pages\loading\index.config.ts                               | TypeScript     |          5 |          0 |          1 |          6 |
+| e:\project\arc\EcoSort\EcoSort\src\pages\loading\index.scss                                    | SCSS           |         62 |          0 |          1 |         63 |
+| e:\project\arc\EcoSort\EcoSort\src\pages\loading\loading.tsx                                   | TypeScript JSX |         45 |          0 |          4 |         49 |
+| e:\project\arc\EcoSort\EcoSort\src\pages\mineHome\index.config.ts                              | TypeScript     |          5 |          0 |          1 |          6 |
+| e:\project\arc\EcoSort\EcoSort\src\pages\mineHome\index.scss                                   | SCSS           |        178 |          0 |          2 |        180 |
+| e:\project\arc\EcoSort\EcoSort\src\pages\mineHome\index.tsx                                    | TypeScript JSX |        183 |          0 |          5 |        188 |
+| e:\project\arc\EcoSort\EcoSort\src\pages\mineSetting\index.config.ts                           | TypeScript     |          5 |          0 |          1 |          6 |
+| e:\project\arc\EcoSort\EcoSort\src\pages\mineSetting\index.scss                                | SCSS           |         80 |          0 |          5 |         85 |
+| e:\project\arc\EcoSort\EcoSort\src\pages\mineSetting\index.tsx                                 | TypeScript JSX |        120 |          1 |         10 |        131 |
+| e:\project\arc\EcoSort\EcoSort\src\store\imgStore.ts                                           | TypeScript     |         51 |          0 |          4 |         55 |
+| e:\project\arc\EcoSort\EcoSort\src\store\userStore.ts                                          | TypeScript     |         33 |          0 |          4 |         37 |
+| Total                                                                                          |                |      4,394 |         35 |        297 |      4,726 |
++------------------------------------------------------------------------------------------------+----------------+------------+------------+------------+------------+

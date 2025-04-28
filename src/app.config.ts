@@ -27,13 +27,13 @@ export default {
         pagePath: "pages/classifyHome/index",
         text: "垃圾分类",
         iconPath: "common/assets/tabbar/sortIcon.png",
-        selectedIconPath: "common/assets/tabbar/sortIcon.png",
+        selectedIconPath: "common/assets/tabbar/sortIconAct.png",
       },
       {
         pagePath: "pages/mineHome/index",
         text: "个人中心",
         iconPath: "common/assets/tabbar/mineIcon.png",
-        selectedIconPath: "common/assets/tabbar/mineIcon.png",
+        selectedIconPath: "common/assets/tabbar/mineIconAct.png",
       },
     ],
   },
@@ -47,7 +47,7 @@ export default {
 
   plugins: {
     WechatSI: {
-      version: "0.3.4",
+      version: "0.3.6",
       provider: "wx069ba97219f66d99",
     },
   },
