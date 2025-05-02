@@ -35,7 +35,7 @@ const Index = () => {
       <Image src={loadingImg.icon} className="loading-icon" mode="widthFix"></Image>
       <View className="loading-content">
         <View className="loading-content-item">你好!</View>
-        <View className="loading-content-item">欢迎来到&nbsp;拉风侠</View>
+        <View className="loading-content-item">欢迎来到&nbsp;慧绿互联</View>
         <View className="loading-content-item">垃圾分类小程序</View>
       </View>
       <View className="loading-floor">

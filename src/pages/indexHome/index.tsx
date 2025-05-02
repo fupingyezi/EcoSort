@@ -76,7 +76,7 @@ const Index = () => {
   return (
     <>
       <LoginWindow {...loginWindowContext} />
-      <MyNavigation type="tab" url="" title="拉风侠" />
+      <MyNavigation type="tab" url="" title="慧绿互联" />
       <View className="index">
         <View className="index-header">
           <IndexContent />

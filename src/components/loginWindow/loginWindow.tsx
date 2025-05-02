@@ -21,7 +21,7 @@ const LoginWindow: React.FC<LoginWindowProps> = memo(
     // setStatus,
   }) => {
     console.log("isOpen", isOpen);
-    const welcomeText = "Hi~\n欢迎登录拉风侠\n爱分类 爱生活";
+    const welcomeText = "Hi~\n欢迎登录慧绿互联\n爱分类 爱生活";
     const setUserInfo = useUserStore((state) => state.setUserInfo);
     const setLogin = useUserStore((state) => state.setLogin);
 
@@ -55,7 +55,7 @@ const LoginWindow: React.FC<LoginWindowProps> = memo(
               onClick={() => setIsAgree(!isAgree)}
             ></View>
             <View className="agree-text">
-              阅读并同意《拉风侠用户协议》、《拉风侠用户隐私政策》
+              阅读并同意《慧绿互联用户协议》、《慧绿互联用户隐私政策》
             </View>
           </View>
         </View>

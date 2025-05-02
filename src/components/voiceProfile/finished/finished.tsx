@@ -21,7 +21,7 @@ const Finished: React.FC<{ content: string }> = memo(({ content }) => {
     <View className="finished">
       <View className="finished-title">
         <Image src={logo} mode="heightFix" style={"height:78rpx"}></Image>
-        <View style={"height: 78rpx;"}>拉风侠</View>
+        <View style={"height: 78rpx;"}>慧绿互联</View>
       </View>
       <View className="finished-content">{processContent(content)}</View>
     </View>

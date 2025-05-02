@@ -1,4 +1,5 @@
-export const preUrl = "http://172.20.10.12:8000/api/v1";
+// export const preUrl = "http://172.20.10.12:8000/api/v1";
+export const preUrl = "http://192.168.163.201:8000/api/v1";
 import Taro from "@tarojs/taro";
 
 const getToken = () => {

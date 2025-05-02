@@ -13,7 +13,7 @@ class App extends Component<PropsWithChildren> {
     try {
       await Taro.loadFontFace({
         family: 'DingTalk JinBuTi',
-        source: 'url("http://172.20.10.12:8000/static/fonts/DingTalk-JinBuTi.ttf")',
+        source: 'url("http://192.168.163.201:8000/static/fonts/DingTalk-JinBuTi.ttf")',
         success: (res) => {
           console.log('字体加载成功', res);
         },
